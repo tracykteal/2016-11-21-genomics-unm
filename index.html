@@ -1,19 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS.
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
+venue: "University of Minnesota"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "FIXME"      # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+country: "us"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "FIXME"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # use YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # use YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+humandate: "Nov 21-22, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "9:00 am - 4:30 pm"    # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: 2016-11-21      # use YYYY-MM-DD format like 2015-01-01
+enddate: 2016-11-22        # use YYYY-MM-DD format like 2015-01-02
+instructor: ["Jon Badalamenti", "Tracy Teal"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["FIXME"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "FIXME"      # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad:         # optional (insert the URL for your Etherpad if you're using one)
+contact: "tkteal@datacarpentry.org"      # contact email address for workshop organizer, such as "grace@hopper.org"
+etherpad: http://pad.software-carpentry.org/2016-11-21-umn        # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
 day1_am: "Data organization in spreadsheets and OpenRefine"
 day1_pm: "Introduction to R"
@@ -61,8 +61,9 @@ This hands-on workshop teaches basic concepts, skills and tools for working more
 effectively with data. 
 </p>
 <p>
-We will cover {{page.day1_am}}, {{page.day1_pm}}, {{page.day2_am}} and {{page.day2_pm}}.
-
+The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization in spreadsheets, data organization, connecting to and using cloud computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline.
+</p>
+<p>
 Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 </p>
 
@@ -131,41 +132,6 @@ Participants should bring their laptops and plan to participate actively. By the
 <hr/>
 
 <!--
-  SCHEDULE
-
-  Show the workshop's schedule.  Edit the items and times in the table
-  to match your plans.  You may also want to change 'Day 1' and 'Day
-  2' to be actual dates or days of the week.
--->
-<h2>Preliminary Schedule</h2>
-
-<!-- DO NOT EDIT SURVEY LINKS -->
-<p><em>Surveys</em></p>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href='{{ site.dc_pre_survey }}'>Pre-workshop Survey</a></p>
-<p><a href='{{ site.dc_post_survey }}'>Post-workshop Survey</a></p>
-
-
-
-<div class="row">
-  <div class="col-md-6">
-
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day1_am}}</td> </tr>
-       <tr> <td>Afternoon</td>  <td>{{page.day1_pm}}</td> </tr>
-    </table>
- 
- 
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day2_am}}</td> </tr>
-      <tr> <td>Afternoon</td>  <td>{{page.day2_pm}}</td> </tr>
-    </table>
- </div>
-</div>
-
-<!--
   ETHERPAD
 
   Display the Etherpad for the workshop.  You can set this up in
@@ -184,6 +150,70 @@ Participants should bring their laptops and plan to participate actively. By the
   We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
+
+
+<!--
+  SCHEDULE
+
+  Show the workshop's schedule.  Edit the items and times in the table
+  to match your plans.  You may also want to change 'Day 1' and 'Day
+  2' to be actual dates or days of the week.
+-->
+<h2>Preliminary Schedule</h2>
+
+<!-- DO NOT EDIT SURVEY LINKS -->
+<p><em>Surveys</em></p>
+<p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href='{{ site.dc_pre_survey }}'>Pre-workshop Survey</a></p>
+<p><a href='{{ site.dc_post_survey }}'>Post-workshop Survey</a></p>
+
+
+<div>
+
+<h2>Workshop overview</h2>
+
+<h3>Day 1</h3>
+
+<b>Module 1:</b> <a href="http://www.datacarpentry.org/introduction-genomics">Workshop Introduction</a>
+
+<ul>
+<li><a href=http://www.datacarpentry.org/introduction-genomics/00-workshop-overview.html>Overview of the workshop</a>
+<li><a href=http://www.datacarpentry.org/introduction-genomics/01-intro-to-dataset.html>Introducing the dataset and questions</a>
+</ul>
+
+<b>Module 2</b> <a href=https://jasonjwilliamsny.github.io/tidiness-genomics/>Data tidiness</a>
+<ul>
+<li>Think about and understand the types of data and metadata a sequencing experiment will generate
+<li>Gain a general understanding of data organization
+</ul>
+
+<b>Module 3:</b> <a href=https://jasonjwilliamsny.github.io/cloud-genomics/>Using cloud computing for genomics</a>
+<ul>
+<li>understand what cloud computing is and why it's useful
+<li>log in to remote computing resources
+</ul>
+
+<b>Module 4:</b> <a href=http://www.datacarpentry.org/shell-genomics/lessons/>Introduction to the command line</a>
+<ul>
+<li>learn to navigate at the command line
+<li>search files
+</ul>
+
+<h3>Day 2</h3>
+
+<b>Module 5:</b> Data wrangling and processing
+<ul>
+<li><a href=https://github.com/datacarpentry/organization-genomics/blob/gh-pages/lessons/01_intro_organization.md>Project Setup</a>
+<li><a href=https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/00-readQC.md>Quality Control of NGS Data</a>
+<li><a href=https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/01-automating_a_workflow.md>Automating a workflow</a>
+</ul>
+
+<b>Module 6:</b> 
+<br>
+<a href=https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/02-variant-calling-workflow.md>Variant Calling Workflow</a> or <a href=https://github.com/datacarpentry/R-genomics>R for data analysis and visualization</a>
+
+
+</div>
 
 <hr/>
 
